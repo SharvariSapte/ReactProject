@@ -1,0 +1,25 @@
+import HeatMap from '@uiw/react-heat-map';
+import React, { useState } from 'react'
+import value from '../HeatMapData';
+
+const Calendar = () => {
+  return (
+   <>
+   <div className='m-10 h-[160px] bg-black/30 rounded-xl flex justify-center items-center pt-5 ring-1 ring-white/60'>
+     <HeatMap value={value} width={700} height={140} legendCellSize={0}
+        startDate={new Date('2026/01/01')} style={{ color: 'white'}}
+      panelColors={{
+        0:  '#FBF4C8',
+        7:  '#b2d521',
+        14: '#b2d521',
+        21: '#b2d521',
+        28: '#b2d521',
+        35: '#b2d521'
+      }}
+     />
+   </div>
+   </>
+  )
+}
+
+export default Calendar
