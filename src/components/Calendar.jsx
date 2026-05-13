@@ -1,6 +1,5 @@
 import HeatMap from '@uiw/react-heat-map';
 import React, { useState } from 'react'
-import value from '../HeatMapData';
 
 const Calendar = (props) => {
   const {log} = props

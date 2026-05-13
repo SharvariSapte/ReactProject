@@ -1,0 +1,25 @@
+.formbg{
+    background: url('/bg.png') no-repeat fixed;
+    background: cover;
+   
+}
+
+.enter {
+    animation: enter 1.5s ease-in-out;
+    
+}
+
+@keyframes enter{
+from{opacity:0.2; transform: translateY(150px); }
+to{opacity:1; transform: translateY(0);}
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+

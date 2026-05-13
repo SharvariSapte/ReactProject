@@ -2,17 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-html{ 
-  background:url('/background.png') no-repeat center fixed; 
-  background-size: cover;
-  min-height: 100%;
-  overflow: hidden;
+body{
+background: #000;
 }
 
-body{
-padding: 0;
-margin: 0;
-}
 
 
 
