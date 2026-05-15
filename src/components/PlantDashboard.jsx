@@ -15,6 +15,10 @@ const PlantDashboard = () => {
         message: 'your plant is healthy and growing (˶ᵔ ᵕ ᵔ˶)'
       },
       {
+        img:'plant4.png',
+        message: `You're almost there!( ◡̀_◡́)ᕤ`
+      },
+      {
         img:'/plant5.png',
         message: 'The flowers have bloomed! ◝(ᵔᗜᵔ)◜'
       }]
@@ -22,10 +26,10 @@ const PlantDashboard = () => {
     <>
     <div className="
     relative rounded-xl h-[450px] max-h-[450px] w-[25%] min-w-[280px] shadow-lg ring-2 ring-white/30 
-    flex flex-col items-center justify-around bg-gradient-to-b from-black/60"
+    flex flex-col items-center justify-around bg-gradient-to-b from-black/60 backdrop-blur-[2px]"
     >
-    <h1 className='text-center text-white text-xl font-bold absolute top-10'>{plantData[3].message}</h1>
-    <img src={plantData[3].img} className='scale-[0.7] absolute bottom-0'/>
+    <h1 className='text-center text-white text-xl font-bold absolute top-10'>{plantData[2].message}</h1>
+    <img src={plantData[2].img} className='scale-[0.7] absolute bottom-0'/>
     </div>   
 </>
 )

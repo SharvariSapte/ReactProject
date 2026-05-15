@@ -3,8 +3,7 @@ import { Flame } from 'lucide-react';
 
 const Streak = (props) => {
     const [streakDays, setStreakDays] = useState(0)
-    const [dayOfWeek, setDayOfWeek] = useState(props.day.getDay())
-    const [days, setDays] = useState([
+     const [days, setDays] = useState([
         {day:"S", done:false},
         {day:"M", done:false},
         {day:"T", done:false},
@@ -14,24 +13,11 @@ const Streak = (props) => {
         {day:"S", done:false},
     ])
 
-    useEffect(() => {
-    setDayOfWeek(props.day.getDay());
-    setStreakDays(prev => prev+1)
-    }, [props.day])
-    
-
-    function updateWeek(idx){
-        setDays(prev =>
-            prev.map((d,i)=>(
-                i === idx ? {...d,done:true} : d
-            ))
-        )
-    }
   return (
     <>
     <div className='flex flex-col'>
         <div></div>
-        <div className='flex flex-col justify-around items-center h-[180px] rounded-xl ring-2 ring-white/30 bg-black/40'>
+        <div className='flex flex-col justify-around items-center h-[200px] rounded-xl ring-2 ring-white/30 bg-black/40 backdrop-blur-[2px]'>
         <Flame color='cyan' size={70}/>
         <div className='text-white font-semibold text-xl'>{streakDays} day Streak</div>
         <div className='flex gap-2 pb-4 px-2'>

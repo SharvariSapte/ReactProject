@@ -1,29 +1,22 @@
 import React, { useEffect, useState } from 'react'
 
 const CurrentDay = (props) => {
-  const [dailyLog, setDailyLog] = useState([{}])
-  const [done, setDone] = useState(props.status)
-  const [message, setMessage] = useState('Habit followed today?')
- const [newDay, setNewDay] = useState(false)
-  useEffect(() => {
-      setDone(false)
-  }, [props.day])
-  
-  useEffect(() => {
-  setMessage(done ? "Done!" : "Habit followed today?")
-}, [done])
-
+const {day, log, setLog, logDate, streak, setStreak} = props
+const status = log.some(log => log.date === logDate)
+const message = status ? "Done!" : "Habit followed today?"
   return (
     <>
     <div className= 
-    {`text-white font-semibold relative text-xl
-    flex flex-col items-center gap-5 p-4 h-[200px] w-[250px] rounded-xl ring-2 bg-black/40 ${done ? "ring-yellow-400" : "ring-white/30"}`}>
+    {`text-white font-semibold relative text-xl 
+    flex flex-col items-center gap-5 p-4 h-[200px] w-[250px] rounded-xl ring-2 bg-black/40 backdrop-blur-[2px] ${status ? "ring-yellow-400" : "ring-white/30"}`}>
         <p className=''>Today</p>
+        <p className='text-sm'>Learn React</p>
         <button 
         onClick={()=>{
-          setDone(prev => !prev);
-        }} disabled={done}
-        className={`p-3 w-[100%] flex justify-center items-center text-[1rem] rounded-md ${done ? "bg-yellow-400" : "bg-[#b2d521]"}`}>{message}</button>
+           setLog(prev => [...prev, { date: logDate, count: 5 }])
+           setStreak(prev => prev + 1);
+        }} disabled={status}
+        className={`p-3 w-[100%] bg-gradient-to-br from-[#84cc16] to-[#478510] flex justify-center items-center hover:scale-[1.02] text-[1rem] rounded-md ${status ? "bg-gradient-to-br from-yellow-400 to-yellow-700" : "bg-gradient-to-br from-[#84cc16] to-[#478510]"}`}>{message}</button>
     </div>
     </>
   )
