@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom'
 
 const Signup = () => {
   const [x, setX] = useState(0)
-
+  const [y, setY] = useState(0)
   const mouseevent = (event) => {
     const newX = ((event.clientX / window.innerWidth) - 0.5) * -400
     setX(newX)
+    const newY = ((event.clientY/ window.innerHeight) - 0.5) * -35
+    setY(newY)
   }
 
   return (
@@ -18,23 +20,23 @@ const Signup = () => {
       <div
         style={{
           position: 'absolute',
-          top: 0,
+          top: '-2vh',
           left: '-35vw',
           width: '200vw',
-          height: '100%',
+          height: '110%',
           backgroundImage: 'url(/bg.png)',  
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          transform: `translateX(${x}px)`,
-          transition: 'transform 2s ease-out', 
+          transform: `translate(${x}px, ${y}px)`,
+          transition: 'transform 2s ease-out',
         }}
       />
 
       <div className='relative z-10 flex flex-col gap-[70px] items-center'>
         <h1 className='text-6xl text-white font-bold text-center flex flex-col gap-5'>
           <span className='text-5xl'>Ready to grow</span>
-          THE PLANT OF YOUR HABIT?
+          <div>THE <span className='fnt'>Plant</span> OF YOUR HABIT?</div>
         </h1>
         <Link to='/Form'>
           <button className='h-[80px] w-[250px] text-3xl text-white rounded-xl font-bold bg-black/30 ring-1 ring-white/50 hover:scale-[1.02] active:scale-[0.98]'>

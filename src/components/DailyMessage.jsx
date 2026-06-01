@@ -2,7 +2,7 @@ import React from 'react'
 
 const DailyMessage = () => {
   return (
-    <div className='h-[80px] w-[700px] flex justify-center items-center bg-black/50 rounded-md text-white font-bold text-3xl my-4'>
+    <div className='w-[67.2%] h-[65px] ring-1 ring-white/60 flex justify-center items-center bg-black/50 backdrop-blur-[2px] rounded-md text-white font-semibold text-xl'>
         Everyday is a new beginning
     </div>
   )

@@ -1,9 +1,10 @@
 import { AlarmClockCheck, Focus, House, Settings, Sprout, Timer } from 'lucide-react'
 import React from 'react'
 
-const SideBar = () => {
+const SideBar = (props) => {
+  const {growthStage} = props
   return (
-    <div className='h-screen w-[full] bg-black/50 backdrop-blur-sm rounded-l-xl shadow-black shadow-2xl flex flex-col gap-11 p-5
+    <div className='h-screen bg-black/50 backdrop-blur-sm rounded-l-xl shadow-black shadow-2xl flex flex-col gap-11 p-5
      text-white font-bold'>
       <h1 className='text-2xl'>Lorem, ipsum dolor.🌿</h1>
       <div className='flex flex-col gap-11'>
