@@ -22,7 +22,7 @@ const Navbar = (props) => {
         },[]);
   return (
     <>
-    <div className='flex justify-between w-full mb-11'>
+    <div className='flex justify-between w-full'>
     <div>
     <h1 className='text-white font-semibold text-2xl'>{greeting}, {props.user} ! 🌿</h1>
     <h3 className='text-white font-semibold text-xl'>{props.message}</h3>
