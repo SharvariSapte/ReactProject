@@ -5,7 +5,7 @@ const SideBar = (props) => {
   const {growthStage} = props
   return (
     <div className='h-screen bg-black/50 backdrop-blur-sm rounded-l-xl shadow-black shadow-2xl flex flex-col gap-11 p-5
-     text-white font-bold'>
+     text-white font-bold w-full min-w-[200px]'>
       <h1 className='text-2xl'>Lorem, ipsum dolor.🌿</h1>
       <div className='flex flex-col gap-11'>
         <div></div>

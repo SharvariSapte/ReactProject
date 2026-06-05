@@ -8,7 +8,6 @@ const Form = (props) => {
   }
  const inputHandler = (e) =>{
   setUser({...user, [e.target.name] :e.target.value})
-  
  }
  useEffect(() => {
    console.log(user)

@@ -6,8 +6,8 @@ const Calendar = (props) => {
 
   return (
    <>
-   <div className='h-[160px] px-2 min-w-[700px] bg-black/40 rounded-xl flex justify-center items-center pt-5 ring-1 ring-white/60 backdrop-blur-[2px]'>
-     <HeatMap value={log} width={700} height={140} legendCellSize={0}
+   <div className='h-full px-2 w-full overflow-x-auto bg-black/40 rounded-xl flex justify-center items-center pt-5 ring-1 ring-white/60 backdrop-blur-[2px]'>
+     <div className='w-[1200px]'><HeatMap className="w-full" value={log} height={140} legendCellSize={0}
         startDate={new Date('2026/01/01')} style={{ color: 'white'}}
       panelColors={{
         0:  '#FBF4C8',
@@ -17,7 +17,7 @@ const Calendar = (props) => {
         28: '#b2d521',
         35: '#b2d521'
       }}
-     />
+     /></div>
    </div>
    </>
   )

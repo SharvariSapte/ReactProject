@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
 import Signup from './Pages/Signup'
 import Form from './Pages/Form'
+import Homepage from './Pages/Homepage'
 const App = () => {
   const userData = {
     name:'',
@@ -18,7 +19,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Signup user={user}/>}/>
           <Route path='/Form' element={<Form user={user} setUser={setUser}/>}/>
-        <Route path='/Home' element={<Home user={user}/>}/>
+        <Route path='/Home' element={<Homepage user={user}/>}/>
       </Routes>
     </div>
   )

@@ -8,7 +8,7 @@ const message = status ? "Done!" : "Mark today complete"
     <>
     <div className= 
     {`text-white relative text-lg justify-evenly
-    flex flex-col items-center gap-5 p-4 h-[200px] w-[250px] rounded-xl ring-1 bg-black/50 backdrop-blur-[2px] ${status ? "ring-yellow-400" : "ring-white/60"}`}>
+    flex flex-col items-center gap-5 p-4 h-full w-full rounded-xl ring-1 bg-black/50 backdrop-blur-[2px] ${status ? "ring-yellow-400" : "ring-white/60"}`}>
         <p className='font-semibold'>Today</p>
         <div className='text-sm flex justify-center items-center gap-5'><div className={`h-[10px] w-[10px] ring-2 ring-white ${status ? "bg-gradient-to-br from-[#84cc16] to-[#478510]" : "bg-none"}`}></div><div>{user.habit}</div></div>
         <button 

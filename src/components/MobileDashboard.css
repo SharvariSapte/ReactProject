@@ -1,0 +1,15 @@
+.homepage{ 
+  background:url('/background.png') no-repeat center fixed; 
+  background-size: cover;
+  min-height: 100%;
+  overflow: hidden;  
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

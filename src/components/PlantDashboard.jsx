@@ -6,7 +6,7 @@ const PlantDashboard = (props) => {
   return (
     <>
     <div className="
-    relative rounded-xl h-[450px] max-h-[450px] w-[25%] min-w-[280px] shadow-lg ring-2 ring-white/30 
+    relative rounded-xl h-full w-full shadow-lg ring-2 ring-white/30 
     flex justify-center items-center bg-gradient-to-b from-black/60 backdrop-blur-[2px]"
     >
     <div key={growthStage()} className='flex flex-col items-center justify-around h-[100%] w-[100%] appear'>
