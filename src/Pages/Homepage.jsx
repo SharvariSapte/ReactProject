@@ -69,17 +69,17 @@ useEffect(() => {
     },
       {
         img:'/plant2.png',
-       message: 'Your tiny sapling has sprouted (˶ᵔ ᵕ ᵔ˶)',
+       message: 'Your tiny sapling has sprouted (˶ᵔᵕᵔ˶)',
        level:'Sprouting'
       },
       {
         img:'plant3.png',
-         message: 'Your plant is growing bigger ദ്ദി(˵ •̀ ᴗ - ˵ )',
+         message: 'Your plant is growing bigger ദ്ദി(˵•̀ ᴗ -˵)',
          level: 'Growing'
       },
       {
         img:'plant4.png',
-        message: `You're almost there!( ◡̀_◡́)ᕤ`,
+        message: `You're almost there!(◡̀_◡́)ᕤ`,
         level:'Thriving'
       },
       {

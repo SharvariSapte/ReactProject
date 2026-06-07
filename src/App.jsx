@@ -4,6 +4,7 @@ import Home from './Pages/Home'
 import Signup from './Pages/Signup'
 import Form from './Pages/Form'
 import Homepage from './Pages/Homepage'
+import Focus from './Pages/Focus'
 const App = () => {
   const userData = {
     name:'',
@@ -19,7 +20,8 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Signup user={user}/>}/>
           <Route path='/Form' element={<Form user={user} setUser={setUser}/>}/>
-        <Route path='/Home' element={<Homepage user={user}/>}/>
+          <Route path='/Home' element={<Homepage user={user}/>}/>
+        <Route path='/Focus' element={<Focus/>}/>
       </Routes>
     </div>
   )

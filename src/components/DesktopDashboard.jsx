@@ -19,7 +19,7 @@ function DesktopDashboard(props) {
     <div className='p-8 max-w-[1080px]'>
     <Navbar img="usericon2.jpg" user={user.name} message="Consistency today, growth tomorrow"/>
 
-<div className="grid grid-cols-4 grid-rows-5 gap-4 w-full px-4">
+<div className="grid grid-cols-[1.2fr_1fr_1fr_1fr] grid-rows-5 gap-4 w-full max-h-[70vh] px-2">
     <div className="row-span-5">
        <PlantDashboard streak={streak} growthStage={growthStage} plantData={plantData}/>
     </div>
