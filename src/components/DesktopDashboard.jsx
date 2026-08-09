@@ -12,9 +12,24 @@ import Note from './Note'
 
 function DesktopDashboard(props) {
   const {user, plantData,streak,growthStage,today,log,logDate,setLog} = props
+   const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/background.png";
+
+    img.onload = () => {
+      setLoaded(true);
+    };
+  }, []);
   return (
        <>
     <div className='homepage fade-in h-screen w-full'>
+      {!loaded && (
+        <div className="h-full flex items-center justify-center">
+          <div className="animate-spin h-10 w-10 border-4 border-gray-300 border-t-black rounded-full" />
+        </div>
+      )}
+      {loaded&&(
     <div className='flex justify-between'>
     <div className='p-8 max-w-[1080px]'>
     <Navbar img="usericon2.jpg" user={user.name} message="Consistency today, growth tomorrow"/>
@@ -42,7 +57,7 @@ function DesktopDashboard(props) {
 </div>
 </div>
 <div className='hidden min-[1140px]:block'><SideBar growthStage={growthStage}/></div>
-</div>
+</div>)}
     </div>
     </>
   )
