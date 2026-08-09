@@ -21,6 +21,7 @@ function DesktopDashboard(props) {
       setLoaded(true);
     };
   }, []);
+  
   return (
        <>
     <div className={`${loaded ? "homepage" : ""} fade-in h-screen w-full`}>
