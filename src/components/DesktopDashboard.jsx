@@ -23,7 +23,7 @@ function DesktopDashboard(props) {
   }, []);
   return (
        <>
-    <div className='homepage fade-in h-screen w-full'>
+    <div className={`${loaded ? "homepage" : ""} fade-in h-screen w-full`}>
       {!loaded && (
         <div className="h-full flex items-center justify-center">
           <div className="animate-spin h-10 w-10 border-4 border-gray-300 border-t-black rounded-full" />
