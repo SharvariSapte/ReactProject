@@ -12,7 +12,24 @@ const Signup = () => {
     setY(newY)
   }
 
+    const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/bg.png";
+
+    img.onload = () => {
+      setLoaded(true);
+    };
+  }, []);
+
   return (
+    <>
+    {!loaded && (
+        <div className="h-full flex items-center justify-center">
+          <div className="animate-spin h-10 w-10 border-4 border-gray-300 border-t-black rounded-full" />
+        </div>
+      )}
+    {loaded && (
     <div
       className='h-screen w-screen flex justify-center items-center signup overflow-hidden relative'
       onMouseMove={mouseevent}>
@@ -46,6 +63,8 @@ const Signup = () => {
       </div>
 
     </div>
+      )}
+      </>
   )
 }
 
